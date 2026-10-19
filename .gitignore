@@ -1,0 +1,73 @@
+# ===== 依赖安装目录 =====
+# node_modules 体积巨大且可由 lock 文件(如 package-lock.json)完整重建,绝不提交
+node_modules/
+jspm_packages/
+
+# ===== 构建产物 =====
+# 构建产物由源码生成,提交它们会造成 diff 噪音且易过期
+dist/
+build/
+release/
+out/
+output/
+
+# ===== 缓存目录 =====
+.cache/
+.parcel-cache/
+.temp/
+.tmp/
+.eslintcache
+.stylelintcache
+
+# ===== 环境变量与密钥 =====
+# 带 .local 标记的本地配置包含个人/机器相关信息,一律忽略;
+# .env.example 作为配置模板需要保留,故用 ! 反向排除
+.env
+.env.local
+.env.*.local
+!.env.example
+!.env.sample
+
+# ===== 日志文件 =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== 测试与覆盖率 =====
+coverage/
+.nyc_output/
+.vitest/
+.c8/
+
+# ===== 编辑器 / IDE 配置 =====
+# .vscode 内通常只有用户个人设置,但共享的推荐配置(settings.json 等)应保留
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ===== 操作系统无关文件 =====
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# ===== 压缩包 / 临时归档 =====
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
